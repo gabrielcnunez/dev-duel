@@ -1,0 +1,21 @@
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+  "
+>
+  <div style="display: flex; flex-direction: row">
+    <app-text-input
+      (usernameChange)="receiveUsernameOne($event)"
+    ></app-text-input>
+    <p style="margin: 2vh 20px">VS</p>
+    <app-text-input
+      (usernameChange)="receiveUsernameTwo($event)"
+    ></app-text-input>
+  </div>
+  <br />
+  <br />
+  <button class="submit-button" (click)="onSubmit()">Duel</button>
+</div>

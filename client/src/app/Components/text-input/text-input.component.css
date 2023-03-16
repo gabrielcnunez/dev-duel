@@ -1,0 +1,12 @@
+.username-input {
+  /* Rectangle 1 */
+
+box-sizing: border-box;
+width: 329px;
+height: 61px;
+
+background: #E1F1FF;
+border: 1px solid rgba(0, 0, 0, 0.75);
+border-radius: 15px;
+
+}
