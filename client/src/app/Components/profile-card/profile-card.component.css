@@ -1,0 +1,50 @@
+* {
+  font-family: Roboto;
+  font-weight: 300;
+}
+.profile-card {
+  display: flex;
+  border: 1px solid #000000BF;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 500px;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  margin-right: 20px;
+  text-align: center;
+}
+
+.avatar img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.user-details div {
+  margin: 10px;
+  font-size: 24px;
+}
+
+.user-details span {
+  font-size: 13px;
+  background-color: #E1F1FF;
+  padding: 8px;
+  border: 1px solid #000000BF;
+  border-radius: 5px;
+}
+
+.bio {
+  word-wrap: break-word; /* Ensure long words wrap */
+  max-width: 400px; /* Constrain width of the bio section */
+  white-space: pre-wrap; /* Preserve whitespace and allow wrapping */
+  font-size: 14px;
+}

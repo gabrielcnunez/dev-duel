@@ -1,0 +1,19 @@
+<div *ngIf="user" class="profile-card">
+  <div class="avatar">
+    <img [src]="user.avatar_url" alt="User Profile Avatar">
+    <p class="bio">{{ user.bio }}</p>
+  </div>
+  <div class="user-details">
+    <div><span>username</span> {{ user.username }}</div>
+    <div><span>name</span> {{ user.name }}</div>
+    <div><span>location</span> {{ user.location }}</div>
+    <div><span>titles</span> {{ user.titles }}</div>
+    <div><span>fav language</span> {{ user['favorite-language'] }}</div>
+    <div><span>total stars</span> {{ user['total-stars'] }}</div>
+    <div><span>highest star count</span> {{ user['highest-starred'] }}</div>
+    <div><span>public repos</span> {{ user['public-repos'] }}</div>
+    <div><span>perfect repos</span> {{ user['perfect-repos'] }}</div>
+    <div><span>followers</span> {{ user.followers }}</div>
+    <div><span>following</span> {{ user.following }}</div>
+  </div>
+</div>

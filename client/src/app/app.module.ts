@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { TextInputComponent } from './Components/text-input/text-input.component';
 import { UserService } from 'src/user.service';
+import { ProfileCardComponent } from './Components/profile-card/profile-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserService } from 'src/user.service';
     NavbarComponent,
     LinkButtonComponent,
     HomeComponent,
-    TextInputComponent
+    TextInputComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,

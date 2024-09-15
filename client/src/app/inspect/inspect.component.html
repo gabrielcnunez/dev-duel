@@ -10,4 +10,11 @@
   <br />
   <br />
   <button class="submit-button" (click)="onSubmit()">Inspect</button>
+  <br />
+  <br />
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <app-profile-card *ngIf="user" [user]="user"></app-profile-card>
 </div>
