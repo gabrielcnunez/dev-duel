@@ -1,6 +1,7 @@
 .username-input {
   /* Rectangle 1 */
-
+font-family: 'Roboto';
+font-size: 26px;
 box-sizing: border-box;
 width: 329px;
 height: 61px;

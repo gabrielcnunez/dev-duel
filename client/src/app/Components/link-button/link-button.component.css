@@ -1,12 +1,11 @@
-.link-button{
-box-sizing: border-box;
-width: 265px;
-height: 81px;
-cursor: pointer;
-background: #FFFFFF;
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 15px;
+.link-button {
+  font-size: 36px;
+  box-sizing: border-box;
+  width: 265px;
+  height: 81px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
 }
-
-

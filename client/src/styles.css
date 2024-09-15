@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Nunito;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 400;
+}
+
+p,
+button {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.13px;
+  text-align: center;
+}
+
+a {
+  color: #581dff;
+  text-decoration: none;
+}
+
+::placeholder {
+  color: black;
+  font-weight: 300;
+}
