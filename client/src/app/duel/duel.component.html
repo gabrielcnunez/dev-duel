@@ -26,14 +26,20 @@
 
   <div class="duel-users-content">
     <ng-container *ngIf="duelUsers && duelUsers.length === 2">
-      <app-profile-card
-        *ngIf="duelUsers[0]"
-        [user]="duelUsers[0]"
-      ></app-profile-card>
-      <app-profile-card
-        *ngIf="duelUsers[1]"
-        [user]="duelUsers[1]"
-      ></app-profile-card>
+      <div class="profile-card-container">
+        <div *ngIf="winnerIndex === 0" class="winner-text">Winner!!!</div>
+        <app-profile-card
+          *ngIf="duelUsers[0]"
+          [user]="duelUsers[0]"
+        ></app-profile-card>
+      </div>
+      <div class="profile-card-container">
+        <div *ngIf="winnerIndex === 1" class="winner-text">Winner!!!</div>
+        <app-profile-card
+          *ngIf="duelUsers[1]"
+          [user]="duelUsers[1]"
+        ></app-profile-card>
+      </div>
     </ng-container>
   </div>
 </div>
