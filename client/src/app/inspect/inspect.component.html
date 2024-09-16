@@ -13,7 +13,7 @@
   <br />
   <br />
   <div *ngIf="error" class="error-message">
-    {{ error }}
+    {{ error.error.message }}
   </div>
 
   <app-profile-card *ngIf="user" [user]="user"></app-profile-card>

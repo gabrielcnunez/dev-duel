@@ -8,8 +8,8 @@ import { UserService } from 'src/user.service';
 })
 export class InspectComponent implements OnInit {
   username: string = '';
-  user: any = null;
-  error: string | null = null;
+  user: any;
+  error: any;
 
   constructor(private userService: UserService) {}
 
@@ -19,17 +19,15 @@ export class InspectComponent implements OnInit {
     this.username = valueEmitted;
   }
 
-  onSubmit() {
-    this.error = null; 
+  async onSubmit() {
+    this.error = null;
     this.user = null;
 
-    this.userService.inspectUser(this.username).subscribe(
-      (data) => {
-        this.user = data;
-      },
-      (error) => {
-        this.error = 'User not found. Please try again.';
-      }
-    );
+    try {
+      this.user = await this.userService.inspectUser(this.username);
+    } catch (error) {
+      this.error = error;
+      throw error;
+    }
   }
 }
