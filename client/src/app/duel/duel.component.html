@@ -18,4 +18,15 @@
   <br />
   <br />
   <button class="submit-button" (click)="onSubmit()">Duel</button>
+  <br />
+  <br />
+  <div *ngIf="error" class="error-message">
+    {{ error.error.message }}
+  </div>
+
+  <ng-container *ngIf="duelUsers && duelUsers.length === 2">
+    <app-profile-card *ngIf="duelUsers[0]" [user]="duelUsers[0]"></app-profile-card>
+    <app-profile-card *ngIf="duelUsers[1]" [user]="duelUsers[1]"></app-profile-card>
+  </ng-container>
+
 </div>

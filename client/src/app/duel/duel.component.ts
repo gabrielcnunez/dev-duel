@@ -7,8 +7,10 @@ import { UserService } from 'src/user.service';
   styleUrls: ['./duel.component.css']
 })
 export class DuelComponent implements OnInit {
-  usernameOne: string = ""
-  usernameTwo: string = ""
+  usernameOne: string = "";
+  usernameTwo: string = "";
+  duelUsers: any;
+  error: any;
 
   constructor(private userService: UserService) { }
 
@@ -23,7 +25,15 @@ export class DuelComponent implements OnInit {
     this.usernameTwo = valueEmitted;
   }
 
-  onSubmit() {
-    this.userService.duelUsers(this.usernameOne, this.usernameTwo);
+  async onSubmit() {
+    this.error = null;
+    this.duelUsers = null;
+
+    try {
+      this.duelUsers = await this.userService.duelUsers(this.usernameOne, this.usernameTwo);
+    } catch (error) {
+      this.error;
+      throw error;
+    }
   }
 }

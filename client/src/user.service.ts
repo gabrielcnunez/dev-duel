@@ -22,10 +22,14 @@ export class UserService {
   }
 
   async duelUsers(user1 = 'fabpot', user2 = 'andrew') {
-    let data = await this.http
-      .get(duelUsersUrl + `username=${user1}&username=${user2}`)
-      .toPromise();
-    console.log(data);
-    return data;
+    let source = this.http.get(
+      duelUsersUrl + `username=${user1}&username=${user2}`
+    );
+    try {
+      let data = await lastValueFrom(source);
+      return data;
+    } catch (error) {
+      throw error;
+    }
   }
 }
