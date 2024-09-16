@@ -12,19 +12,30 @@
 .duel-users-content {
   display: flex;
   justify-content: space-between;
-  gap: 20px; /* Space between profile cards */
+  gap: 20px;
   margin-top: 20px;
-  position: relative; /* Required for absolute positioning of winner text */
+  position: relative;
 }
 
 .profile-card-container {
-  position: relative; /* Required for absolute positioning of winner text */
+  position: relative; 
 }
 
 .winner-text {
   text-align: center;
   font-weight: bold;
   position: absolute;
-  top: -30px; /* Adjust as needed to fit above the profile card */
+  top: -50px;
   width: 100%;
+  font-size: 24px;
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
 }
