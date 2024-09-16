@@ -2,17 +2,24 @@
   font-family: Roboto;
   font-weight: 300;
 }
+
 .profile-card {
   display: flex;
   border: 1px solid #000000BF;
   padding: 10px;
   border-radius: 10px;
-  max-width: 500px;
-  flex-wrap: wrap;
+  width: 649px;
+  height: 468px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.avatar {
-  margin-right: 20px;
+.avatar-bio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
   text-align: center;
 }
 
@@ -20,18 +27,29 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
+  margin-bottom: 10px;
+}
+
+.bio {
+  word-wrap: break-word; 
+  max-width: 200px; 
+  white-space: pre-wrap;
+  font-size: 14px;
 }
 
 .user-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-grow: 1;
+  width: 66%;
+  padding-left: 20px;
 }
 
 .user-details div {
-  margin: 10px;
-  font-size: 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px; 
 }
 
 .user-details span {
@@ -40,11 +58,11 @@
   padding: 8px;
   border: 1px solid #000000BF;
   border-radius: 5px;
+  min-width: 100px;
+  margin-right: 10px;
+  text-align: center;
 }
 
-.bio {
-  word-wrap: break-word; /* Ensure long words wrap */
-  max-width: 400px; /* Constrain width of the bio section */
-  white-space: pre-wrap; /* Preserve whitespace and allow wrapping */
-  font-size: 14px;
+.user-details div p {
+  margin: 0;
 }
